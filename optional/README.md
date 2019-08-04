@@ -3,7 +3,7 @@
 The `Optional(T)` struct represents an optional value; every `Optional` either contains a value or contains no value:
 
 ```go
-// The zero value is an empty Optional.
+// The zero value is an empty Optional. Two Optionals may be compared for equality to determine if both are empty or contain equal values.
 type Optional (type T) struct {
     // unexported fields
 }
