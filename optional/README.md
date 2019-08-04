@@ -14,6 +14,9 @@ func New (type T) (value T) Optional(T)
 // Unwrap returns the value contained within, or panics if there is no wrapped value.
 func (Optional(T)) Unwrap() T
 
+// Unwrap returns the value contained within, or the given value if there is no wrapped value.
+func (Optional(T)) UnwrapOr(value T) T
+
 // IsEmpty returns true if the Optional is empty.
 func (Optional(T)) IsEmpty() bool
 ```
