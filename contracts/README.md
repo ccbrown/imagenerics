@@ -1,3 +1,5 @@
+# contracts
+
 ```go
 contract Ordered(T) {
     T int, int8, int16, int32, int64,
