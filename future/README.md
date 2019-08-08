@@ -12,11 +12,11 @@ type Future (type T, E result) {
     // unexported fields
 }
 
-// NewWithValue creates a future that immediately resolves with the given value
-func (type T, E result) NewWithValue(value T) *Future(T, E)
+// WithValue creates a future that immediately resolves with the given value
+func (type T, E result) WithValue(value T) *Future(T, E)
 
-// NewWithChannel creates a future that resolves when the channel receives a result.
-func (type T, E result) NewWithChannel(ch <-chan result.Result(T, E)) *Future(T, E)
+// WithChannel creates a future that resolves when the channel receives a result.
+func (type T, E result) WithChannel(ch <-chan result.Result(T, E)) *Future(T, E)
 
 func (f *Future(T, E)) Wait() (T, E)
 
@@ -49,13 +49,13 @@ func (type T1, T2, E joinable) Join(a *Future(T1, E), b *Future(T2, E)) *Future(
 ```go
 // Creates a future that waits for the given duration.
 func Wait(d time.Duration) future.Future(time.Time, error) {
-    return future.NewWithChannel(algorithm.MapChannel(time.After(d), result.Ok))
+    return future.WithChannel(algorithm.MapChannel(time.After(d), result.Ok))
 }
 
 func main() {
     future.Then(Wait(time.Second), func(t time.Time, err error) *Future(struct{}, error) {
         println("hello!")
-        return future.NewWithValue(struct{}{})
+        return future.WithValue(struct{}{})
     }).Wait()
 }
 ```
