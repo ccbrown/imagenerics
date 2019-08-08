@@ -1,4 +1,4 @@
-# channels
+# chans
 
 ```go
 // Map can be used to forward values received on a channel to a new one of a different type.
