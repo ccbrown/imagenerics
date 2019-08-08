@@ -23,6 +23,9 @@ func (r *Result(T, E)) IsOk() bool
 
 // Unwrap returns the value contained by the result. Panics if the result contains an error.
 func (r *Result(T, E)) Unwrap() T
+
+// Error returns the error contained by the result. Panics if the result does not contain an error.
+func (r *Result(T, E)) Error() E
 ```
 
 ## Inspiration
