@@ -9,6 +9,12 @@ type Result (type T, E result) struct {
     // unexported fields
 }
 
+// Ok returns a new result that wraps the given value.
+func (type T, E result) Ok(value T) Result(T, E)
+
+// Error returns a new result that wraps the given error.
+func (type T, E result) Error(err E) Result(T, E)
+
 func (r *Result(T, E)) IsError() bool
 
 func (r *Result(T, E)) IsOk() bool
