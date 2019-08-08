@@ -13,7 +13,27 @@ func (m *OrderedMap(K, V)) Set(key K, value V)
 
 func (m *OrderedMap(K, V)) Get(key K) optional.Optional(V)
 
-// etc.
+func (m *OrderedMap(K, V)) Len() int
+
+func (m *OrderedMap(K, V)) Max() *Iterator(K, V)
+
+func (m *OrderedMap(K, V)) MaxBefore(key K) *Iterator(K, V)
+
+func (m *OrderedMap(K, V)) Min() *Iterator(K, V)
+
+func (m *OrderedMap(K, V)) MinAfter(key K) *Iterator(K, V)
+
+type Iterator type (K, V KeyValue) struct {
+    // unexported fields
+}
+
+func (it *Iterator(K, V)) Key() K
+
+func (it *Iterator(K, V)) Value() V
+
+func (it *Iterator(K, V)) Next() *Iterator(K, V)
+
+func (it *Iterator(K, V)) Prev() *Iterator(K, V)
 ```
 
 ## Example
