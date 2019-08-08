@@ -15,3 +15,13 @@ func (m *OrderedMap(K, V)) Get(key K) optional.Optional(V)
 
 // etc.
 ```
+
+## Example
+
+```go
+func main() {
+    m := &OrderedMap("string", "string){}
+    m.Set("foo", "bar")
+    println(m.Get("foo").Or("baz"))
+}
+```
