@@ -49,7 +49,7 @@ func (type T1, T2, E joinable) Join(a *Future(T1, E), b *Future(T2, E)) *Future(
 ```go
 // Creates a future that waits for the given duration.
 func Wait(d time.Duration) future.Future(time.Time, error) {
-    return future.WithChannel(algorithm.MapChannel(time.After(d), result.Ok))
+    return future.WithChannel(channels.Map(time.After(d), result.Ok))
 }
 
 func main() {
