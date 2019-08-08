@@ -5,6 +5,8 @@ contract result(T, E) {
     E Error() string
 }
 
+// Result combines a value and an error into one object. This can be useful in situations such as
+// communicating the result of an operation over a channel.
 type Result (type T, E result) struct {
     // unexported fields
 }
