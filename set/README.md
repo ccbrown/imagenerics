@@ -1,5 +1,7 @@
 # set
 
+Sets can be used to maintain collections of unique elements.
+
 ```go
 type Set(type T) map[T]struct{}
 
