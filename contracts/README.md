@@ -15,6 +15,10 @@ contract Numeric(T) {
       complex64, complex128
 }
 
+contract Complex(T) {
+    T complex64; T complex128
+}
+
 contract OrderedNumeric(T) {
     Ordered(T)
     Numeric(T)
