@@ -14,4 +14,9 @@ contract Numeric(T) {
       float32, float64,
       complex64, complex128
 }
+
+contract OrderedNumeric(T) {
+    Ordered(T)
+    Numeric(T)
+}
 ```
