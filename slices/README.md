@@ -18,6 +18,9 @@ func Every (type T) (s []T, f func(T) bool) bool
 
 // Split returns a slice of subslices separated by elements that f returns true for.
 func Split (type T) (s []T, f func(T) bool) [][]T
+
+// Reduce reduces a []T1 to a single value using a reduction function.
+func Reduce(type T1, T2)(s []T1, initializer T2, f func(T2, T1) T2) T2
 ```
 
 ## Inspiration
