@@ -11,3 +11,11 @@ Using this library couldn't be easier:
 * Imagine using this library in your code.
 
 That's it! All the documentation (and code) is in the various subdirectory README files. Go have a look!
+
+## Playground
+
+If you want to actually try writing and running generic code, you may have some luck in the WASM playground here:
+
+https://ccbrown.github.io/wasm-go-playground/experimental/generics/
+
+It is, however, extremely experimental.
